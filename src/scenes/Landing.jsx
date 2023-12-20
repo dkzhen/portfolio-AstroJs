@@ -80,7 +80,7 @@ const Landing = ({ setSelectedPage }) => {
           >
             CV
           </a>
-          <AnchorLink
+          <a
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
@@ -88,7 +88,7 @@ const Landing = ({ setSelectedPage }) => {
             <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
               Let's talk.
             </div>
-          </AnchorLink>
+          </a>
         </motion.div>
 
         <motion.div

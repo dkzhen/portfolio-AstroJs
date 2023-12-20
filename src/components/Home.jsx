@@ -1,18 +1,17 @@
-import "./index.css";
-import Navbar from "./scenes/Navbar";
-import Landing from "./scenes/Landing";
-import DotGroup from "./scenes/DotGroup";
-import MySkills from "./scenes/MySkills";
-import LineGradient from "./components/LineGradient";
-import Projects from "./scenes/Projects";
-import Contact from "./scenes/Contact";
-import Footer from "./scenes/Footer";
-import useMediaQuery from "./hooks/useMediaQuery";
+import "../index.css";
+import Navbar from "../scenes/Navbar";
+import Landing from "../scenes/Landing";
+import DotGroup from "../scenes/DotGroup";
+import MySkills from "../scenes/MySkills";
+import LineGradient from "../components/LineGradient";
+import Projects from "../scenes/Projects";
+import Contact from "../scenes/Contact";
+import Footer from "../scenes/Footer";
+import useMediaQuery from "../hooks/useMediaQuery";
 import { useEffect, useState } from "react";
-import Testimonials from "./scenes/Testimonials";
 import { motion } from "framer-motion";
 
-function App() {
+const Home = () => {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const isDesktop = useMediaQuery("(min-width: 1060px)");
@@ -61,10 +60,10 @@ function App() {
       </div>
       <LineGradient />
       {/* <div className="w-5/6 mx-auto md:h-full">
-        <motion.div onViewportEnter={() => setSelectedPage("testimonials")}>
-          <Testimonials />
-        </motion.div>
-      </div> */}
+          <motion.div onViewportEnter={() => setSelectedPage("testimonials")}>
+            <Testimonials />
+          </motion.div>
+        </div> */}
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div onViewportEnter={() => setSelectedPage("contact")}>
@@ -74,6 +73,5 @@ function App() {
       <Footer />
     </div>
   );
-}
-
-export default App;
+};
+export default Home;

@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -26,15 +25,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-2 md:py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <AnchorLink
-          className=""
-          onClick={() => setSelectedPage("home")}
-          href="#home"
-        >
+        <a className="" onClick={() => setSelectedPage("home")} href="#home">
           <span className=" font-playfair text-lg md:text-3xl font-bold">
             ZHEN
           </span>
-        </AnchorLink>
+        </a>
 
         {/* DESKTOP NAV */}
         {isDesktop ? (
